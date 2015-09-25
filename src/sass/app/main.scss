@@ -1,0 +1,328 @@
+/* REQUIRED: DO NOT REMOVE */
+@import "../../global/sass/rubix/overrides/variables";
+@import "../../global/sass/vendor/bootstrap/bootstrap";
+@import "../../global/sass/vendor/sass-list-maps/sass-list-maps";
+
+@import "../../global/sass/rubix/base/base";
+@import "../../global/sass/rubix/layout/layout";
+@import "../../global/sass/rubix/module/module";
+
+/* THIRD-PARTY PLUGINS (CAN BE REMOVED) */
+@import "../../global/sass/vendor/prism/prism";
+@import "../../global/sass/vendor/ion/tabs";
+@import "../../global/sass/vendor/ion/rangeSlider";
+@import "../../global/sass/vendor/hubspot/vex";
+@import "../../global/sass/vendor/hubspot/messenger";
+@import "../../global/sass/vendor/timeline/timeline";
+@import "../../global/sass/vendor/bootstrap-slider/bootstrap-slider";
+@import "../../global/sass/vendor/xeditable/xeditable";
+@import "../../global/sass/vendor/typeahead/typeahead";
+@import "../../global/sass/vendor/select2/select2";
+@import "../../global/sass/vendor/jquery-steps/jquery-steps";
+@import "../../global/sass/vendor/tablesaw/tablesaw";
+@import "../../global/sass/vendor/datatables/datatables";
+@import "../../global/sass/vendor/fullcalendar/fullcalendar";
+@import "../../global/sass/vendor/fullcalendar/fullcalendar-print";
+@import "../../global/sass/vendor/nestable/nestable";
+@import "../../global/sass/vendor/dropzone/dropzone";
+@import "../../global/sass/vendor/jcrop/jcrop";
+@import "../../global/sass/vendor/bootstrap-datetimepicker/bootstrap-datetimepicker";
+@import "../../global/sass/vendor/c3js/c3js";
+@import "../../global/sass/vendor/leaflet/leaflet";
+@import "../../global/sass/vendor/blueimp-gallery/blueimp-gallery";
+@import "../../global/sass/vendor/trumbowyg/trumbowyg";
+@import "../../global/sass/vendor/switchery/switchery";
+
+/* IMPORT PAGE STYLES */
+@import "pages/pages";
+/* IMPORT PRINT STYLES */
+@import "print/print";
+
+html[dir='rtl'] {
+  [class^="icon-"].float-right-rtl,
+  [class*=" icon-"].float-right-rtl {
+    position: relative;
+    /*@noflip*/float: right;
+  }
+}
+
+body {
+  opacity: 1;
+  transition: all 0.7s ease;
+
+  &.fade-out {
+    transition: all 0.25s ease;
+    opacity: 0;
+  }
+}
+
+#app-preloader > .preloader {
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  position: fixed;
+  background: #E9EDF2;
+  z-index: 99999999999;
+}
+#app-preloader > .preloader > img {
+  margin: auto;
+  display: block;
+  margin-top: 150px;
+  position: relative;
+}
+html.station body {
+}
+
+/* CUSTOM STATION STYLES */
+.material-icons {
+  vertical-align: middle;
+  &.md-18 { font-size: 18px; }
+  &.md-24 { font-size: 24px; }
+  &.md-28 { font-size: 28px; }
+  &.md-36 { font-size: 36px; }
+  &.md-48 { font-size: 48px; }
+}
+
+.vert-middle{ vertical-align: middle; }
+
+.grey-clr {
+  color: $st-grey;
+}
+
+.orange-clr {
+  color: $st-orange;
+}
+
+.pace-small .pace .pace-progress {
+  background: $st-orange;
+}
+
+h1, .h1-class {
+  font-size: 28px;
+  font-weight: 200;
+  color: $st-grey;
+}
+
+/* Needs to be moved out */
+.react-toggle {
+  display: inline-block;
+  position: relative;
+  cursor: pointer;
+  background-color: transparent;
+  border: 0;
+  padding: 0;
+
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+
+  -webkit-tap-highlight-color: rgba(0,0,0,0);
+  -webkit-tap-highlight-color: transparent;
+}
+
+.react-toggle-screenreader-only {
+  border: 0;
+  clip: rect(0 0 0 0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px;
+}
+
+.react-toggle--disabled {
+  opacity: 0.5;
+  -webkit-transition: opacity 0.25s;
+  transition: opacity 0.25s;
+}
+
+.react-toggle-track {
+  width: 50px;
+  height: 24px;
+  padding: 0;
+  border-radius: 30px;
+  background-color: #4D4D4D;
+  -webkit-transition: all 0.2s ease;
+  -moz-transition: all 0.2s ease;
+  transition: all 0.2s ease;
+}
+
+.react-toggle:hover .react-toggle-track {
+  background-color: #000000;
+}
+
+.react-toggle--checked .react-toggle-track {
+  background-color: #19AB27;
+}
+
+.react-toggle.react-toggle--checked:hover .react-toggle-track {
+  background-color: #128D15;
+}
+
+.react-toggle-track-check {
+  position: absolute;
+  width: 14px;
+  height: 10px;
+  top: 0px;
+  bottom: 0px;
+  margin-top: auto;
+  margin-bottom: auto;
+  line-height: 0;
+  left: 8px;
+  opacity: 0;
+  -webkit-transition: opacity 0.25s ease;
+  -moz-transition: opacity 0.25s ease;
+  transition: opacity 0.25s ease;
+}
+
+.react-toggle--checked .react-toggle-track-check {
+  opacity: 1;
+  -webkit-transition: opacity 0.25s ease;
+  -moz-transition: opacity 0.25s ease;
+  transition: opacity 0.25s ease;
+}
+
+.react-toggle-track-x {
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  top: 0px;
+  bottom: 0px;
+  margin-top: auto;
+  margin-bottom: auto;
+  line-height: 0;
+  right: 10px;
+  opacity: 1;
+  -webkit-transition: opacity 0.25s ease;
+  -moz-transition: opacity 0.25s ease;
+  transition: opacity 0.25s ease;
+}
+
+.react-toggle--checked .react-toggle-track-x {
+  opacity: 0;
+}
+
+.react-toggle-thumb {
+  transition: all 0.5s cubic-bezier(0.23, 1, 0.32, 1) 0ms;
+  position: absolute;
+  top: 1px;
+  left: 1px;
+  width: 22px;
+  height: 22px;
+  border: 1px solid #4D4D4D;
+  border-radius: 50%;
+  background-color: #FAFAFA;
+
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+
+  -webkit-transition: all 0.25s ease;
+  -moz-transition: all 0.25s ease;
+  transition: all 0.25s ease;
+}
+
+.react-toggle--checked .react-toggle-thumb {
+  left: 27px;
+  border-color: #19AB27;
+}
+
+.react-toggle--focus .react-toggle-thumb {
+  -webkit-box-shadow: 0px 0px 3px 2px #0099E0;
+  -moz-box-shadow: 0px 0px 3px 2px #0099E0;
+  box-shadow: 0px 0px 2px 3px #0099E0;
+}
+
+.react-toggle:active .react-toggle-thumb {
+  -webkit-box-shadow: 0px 0px 5px 5px #0099E0;
+  -moz-box-shadow: 0px 0px 5px 5px #0099E0;
+  box-shadow: 0px 0px 5px 5px #0099E0;
+}
+
+
+
+/* Remove this too */
+#auth-container {
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: block;
+    overflow: auto;
+    position: fixed;
+    background: url(/imgs/city_overlay_bg.jpg) no-repeat;
+    background-position: center top;
+    background-size: cover;
+    z-index: 999999999999999999;
+    background-color: #000;
+
+    .input__label {
+      color: darken(#fff, 2%);
+    }
+
+    .input__field--ruri {
+      font-size: 24px;
+      margin-bottom: 20px;
+    }
+
+    .input__label--ruri {
+      font-size: 18px;
+    }
+
+    .input {
+      max-width: 100%;
+      width: 100%;
+      margin: 0;
+    }
+
+    .input__field--ruri:focus + .input__label--ruri .input__label-content--ruri, .input--filled .input__label--ruri .input__label-content--ruri {
+        color: $st-orange;
+        -webkit-transform: translate3d(0, 2.5em, 0) scale3d(0.75, 0.75, 1);
+        transform: translate3d(0, 2.5em, 0) scale3d(0.75, 0.75, 1);
+    }
+
+    .st-orange-opacity{
+      margin: 0 auto;
+      width: 100%;
+      display: block;
+      border-radius: 0;
+      padding: 5px 0 !important;
+      height: 100%;
+      font-size: 18px;
+      color: #fff;
+      border: none;
+      background-color: rgba($st-orange, .70);
+      transition: all .25s ease-in-out;
+
+      &:hover {
+        background-color: rgba($st-orange, 1)
+      }
+    }
+}
+
+.input__field--ruri:focus + .input__label--ruri::after, .input--filled .input__label--ruri::after {
+    background: $st-orange;
+    -webkit-transform: scale3d(1, 0.25, 1);
+    transform: scale3d(1, 0.25, 1);
+}
+
+
+.input__label--ruri::after {
+  background: darken(#fff, 2%);
+  height: 5px;
+}
+
+#auth-cell {
+    margin: 7% auto;
+}
+
+@media screen and (min-width: 768px) {
+  #auth-cell>div {
+      width: 75%;
+  }
+}

@@ -1,0 +1,316 @@
+.account-stats {
+  .buckets {
+    background-color: $st-off-white;
+    padding: 10px 10px 15px;
+    -webkit-box-shadow: 0 2px 2px 0 rgba(0,0,0,.24);
+    box-shadow: 0 2px 2px 0 rgba(0,0,0,.24);
+
+    h2{
+      color: #ff5722;
+      font-size: 48px;
+      font-weight: 200;
+      margin-top: 5px;
+      margin-bottom: 5px;
+    }
+
+    p {
+      font-size: 18px;
+      color: $st-dark-grey;
+      font-weight: 200;
+    }
+
+    i {
+      margin-right: 10px;
+    }
+  }
+}
+
+p.ast-info {
+  color: $st-dark-grey;
+  font-weight: 400;
+  font-size: 12px;
+  margin-top: 15px;
+}
+
+#accounts {
+  margin-top: 30px;
+
+  h2 {
+
+    &.h1-class {
+      margin-top: 0;
+      color: $st-dark-grey;
+    }
+  }
+  .AccountsView {
+    .col-sm-12 {
+      padding-left: 0;
+      padding-right: 0;
+    }
+  }
+
+    .row:not(.account-details) {
+
+      .col-sm-2 {
+        width: 12%;
+      }
+
+      .col-sm-10 {
+        width:88%;
+      }
+
+      img.img-responsive {
+        border-radius: 50%;
+        -webkit-border-radius: 50%;
+      }
+    }
+  }
+
+
+.account-container {
+
+  .account-grid {
+    padding-left: 25px;
+    padding-right: 25px;
+  }
+
+  .account-head {
+    background-color: $st-off-white;
+    -webkit-box-shadow: 0 2px 2px 0 rgba(0,0,0,.24);
+    box-shadow: 0 2px 2px 0 rgba(0,0,0,.24);
+    margin-bottom: 2px;
+    padding: 20px;
+    cursor: pointer;
+
+    p.name {
+      font-size: 18px;
+      font-weight: 200;
+      color: #333;
+      margin: 0;
+      transition: all .25s ease-in-out;
+    }
+
+    &:hover {
+      p.name {
+        color: $st-orange !important;
+        transition: all .25s ease-in-out;
+      }
+    }
+
+    button {
+      &:before {
+        content: '';
+        display: block;
+        position: absolute;
+        transition: all .25s ease-in-out;
+        transform: translate(75%, -50%) rotate(45deg);
+      }
+      &:after {
+        content: '';
+        display: block;
+        position: absolute;
+        transition: all .25s ease-in-out;
+        transform: translate(75%, -50%) rotate(45deg);
+      }
+    }
+  }
+
+  .account-details {
+    height: 0;
+    overflow:hidden;
+    transition: all .25s ease-in-out;
+    padding: 0;
+    opacity:0;
+    margin: 0px -35px 0px;
+
+    h4 {
+      font-size: 22px;
+      font-weight: 200;
+      color: $st-dark-grey;
+      margin-bottom: 5px;
+    }
+
+    .row {
+      padding: 0 25px !important;
+    }
+  }
+
+    p {
+      color: $st-grey-text;
+      font-size: 16px;
+      line-height: 1.8;
+    }
+    button.edit {
+      color: $st-orange;
+      font-weight: 200;
+      background-color: transparent;
+      border: none;
+      text-transform: none;
+      font-size: 18px;
+      padding: 0;
+      margin: 0 auto 10px;
+    }
+
+    ul.users-list {
+      list-style: none;
+      padding: 0;
+
+      li {
+        font-size: 16px;
+        color: $st-grey-text;
+        line-height: 1.8;
+      }
+    }
+
+    .add-user {
+      margin-top: 12.5px;
+      margin-bottom: 12.5px;
+    }
+
+  &.open {
+
+    .account-head {
+        p.name {
+          color: $st-orange;
+        }
+    }
+
+    .account-details {
+      background-color: $st-off-white;
+      -webkit-box-shadow: 0px 6px 20px 1px rgba(204,204,204,1);
+      -moz-box-shadow: 0px 6px 20px 1px rgba(204,204,204,1);
+      box-shadow: 0px 6px 20px 1px rgba(204,204,204,1);
+      height: 100%;
+      margin: -2px -35px 20px;
+      padding: 20px;
+      opacity: 1;
+      transition: all .25s ease-in-out;
+    }
+  }
+}
+
+.modal-dialog.account-modal {
+    width: 75%;
+
+    h4 {
+      font-size: 22px;
+      font-weight: 200;
+      color: $st-dark-grey;
+      margin-bottom: 5px;
+      display: inline-block;
+    }
+
+    p {
+
+      &.desc {
+        margin: 15px 0 5px;
+        color: $st-grey-text;
+        font-size: 16px;
+        line-height: 1.8;
+        display: inline-block;
+      }
+    }
+
+    .edit-content {
+      display: inline-block;
+    }
+
+    .modal-content {
+      padding: 15px 0;
+    }
+
+    .modal-header{
+      margin: 0 20px;
+    }
+
+    .modal-body{
+      margin: 0 20px;
+
+      .underline-bottom {
+        margin-bottom: 15px;
+      }
+
+      ul.users-list {
+        list-style: none;
+        padding: 0;
+
+        li {
+          font-size: 16px;
+          color: $st-grey-text;
+          line-height: 1.8;
+        }
+      }
+
+      h4 {
+        margin-top: 0px;
+        display: inline-block;
+      }
+
+      .add-user {
+        margin-top: 0px;
+      }
+    }
+
+    .modal-footer {
+      border-top: none;
+    }
+}
+
+.underline-bottom {
+  border-bottom: 1px solid #d8d8d8;
+}
+
+.st-orange-outline {
+
+  &.btn{
+    border-radius: 0;
+    color: $st-orange;
+    border-color: $st-orange;
+    text-transform: none;
+    font-size: 14px;
+    padding: 5px 20px;
+    height: 100%;
+    background-color: transparent;
+
+    &:hover {
+      background-color: $st-orange;
+      border-color: $st-orange;
+    }
+  }
+}
+
+.st-orange-solid {
+
+  &.btn {
+    border-radius: 0;
+    border-color: $st-orange;
+    text-transform: none;
+    font-size: 14px;
+    padding: 5px 20px;
+    height: 100%;
+    background-color: $st-orange;
+
+    &:hover {
+      background-color: lighten($st-orange, 5%);
+      border-color: lighten($st-orange, 5%);
+    }
+  }
+}
+
+
+.no-gutter {
+  float:none;
+  display:inline-block;
+
+  &.align-bottom {
+    vertical-align:bottom;
+  }
+
+  &.align-middle {
+    vertical-align: middle;
+  }
+
+  &.align-top {
+    vertical-align: top;
+  }
+}
